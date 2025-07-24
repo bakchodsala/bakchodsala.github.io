@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services | SecureWithParmar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #111111;
+      position: relative;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Background Geometric Shapes */
+    .background-shapes {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .shape {
+      position: absolute;
+      transform: rotate(-15deg);
+      opacity: 0.05;
+    }
+
+    .shape.shape1 {
+      width: 200%;
+      height: 400px;
+      background: #000;
+      top: -100px;
+      left: -50%;
+    }
+
+    .shape.shape2 {
+      width: 200%;
+      height: 300px;
+      background: #111;
+      top: 300px;
+      left: -40%;
+    }
+
+    .shape.shape3 {
+      width: 150%;
+      height: 200px;
+      background: #000;
+      top: 700px;
+      left: -30%;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background-color: #000;
+      color: #fff;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+    }
+
+    nav {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 6px;
+      position: relative;
+      transition: all 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+      animation: fadeInUp 1s ease;
+    }
+
+    .service {
+      margin-bottom: 50px;
+    }
+
+    .service h2 {
+      font-size: 1.8rem;
+      color: #000;
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 80px;
+      font-size: 0.9rem;
+      color: #666;
+      padding-bottom: 40px;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      animation-delay: 1.2s;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      nav { flex-direction: column; gap: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Shapes -->
+  <div class="background-shapes">
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+  </div>
+
+  <header>
+    <h1>Our Services</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="service">
+      <h2>🔍 Penetration Testing</h2>
+      <p>Simulated cyberattacks to identify and fix security weaknesses in your web apps, networks, and infrastructure.</p>
+    </div>
+
+    <div class="service">
+      <h2>🐞 Bug Bounty Help</h2>
+      <p>We help companies set up, manage, and triage responsible disclosure programs to improve security through ethical hackers.</p>
+    </div>
+
+    <div class="service">
+      <h2>🛡️ Security Consulting</h2>
+      <p>From securing startups to enterprise environments, we guide you through best practices, compliance, and threat modeling.</p>
+    </div>
+
+    <div class="service">
+      <h2>📚 Training & Workshops</h2>
+      <p>Hands-on sessions for teams on cybersecurity awareness, red teaming, and web app security testing.</p>
+    </div>
+  </main>
+
+  <footer id="contact">
+    Contact: <a href="mailto:securewithparmar@gmail.com">securewithparmar@gmail.com</a><br />
+    &copy; 2025 SecureWithParmar. Built by Himanshu Parmar
+  </footer>
+</body>
+</html>
