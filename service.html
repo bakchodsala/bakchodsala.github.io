@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services | SecureWithParmar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #111111;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .background-shapes {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .shape {
+      position: absolute;
+      transform: rotate(-15deg);
+      opacity: 0.05;
+    }
+
+    .shape1 {
+      width: 200%;
+      height: 400px;
+      background: #000;
+      top: -100px;
+      left: -50%;
+    }
+
+    .shape2 {
+      width: 200%;
+      height: 300px;
+      background: #111;
+      top: 300px;
+      left: -40%;
+    }
+
+    .shape3 {
+      width: 150%;
+      height: 200px;
+      background: #000;
+      top: 700px;
+      left: -30%;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background-color: #000;
+      color: #fff;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    nav {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+      animation: fadeInUp 1s forwards;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #000;
+    }
+
+    .service {
+      margin-bottom: 40px;
+      border-left: 4px solid #000;
+      padding-left: 20px;
+    }
+
+    .service h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: #111;
+    }
+
+    .service p {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .cta {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    .cta a {
+      text-decoration: none;
+      color: #fff;
+      background-color: #000;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .cta a:hover {
+      background-color: #333;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #666;
+      animation: fadeIn 1s forwards;
+      animation-delay: 1.2s;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Shapes -->
+  <div class="background-shapes">
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+  </div>
+
+  <header>
+    <h1>SecureWithParmar</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>What We Offer</h2>
+
+    <div class="service">
+      <h3>Penetration Testing</h3>
+      <p>We simulate real-world attacks on your applications, infrastructure, or cloud to identify critical vulnerabilities before attackers do.</p>
+    </div>
+
+    <div class="service">
+      <h3>Bug Bounty Consulting</h3>
+      <p>We help companies set up responsible disclosure programs and guide researchers to ethically report and patch security issues.</p>
+    </div>
+
+    <div class="service">
+      <h3>Security Audits</h3>
+      <p>Our structured audit process reviews your entire digital footprint—from websites and APIs to internal tools—for security misconfigurations and code weaknesses.</p>
+    </div>
+
+    <div class="cta">
+      <p>Want to secure your business? <a href="mailto:securewithparmar@gmail.com">Let's Talk</a></p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 SecureWithParmar. All rights reserved.
+  </footer>
+
+</body>
+</html>
