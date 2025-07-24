@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SecureWithParmar</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -14,63 +14,168 @@
     }
 
     body {
-      background-color: #0d1117;
-      color: #c9d1d9;
+      background-color: #ffffff;
+      color: #111111;
+      position: relative;
       line-height: 1.6;
-      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    /* Geometric Background */
+    .background-shapes {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .shape {
+      position: absolute;
+      transform: rotate(-15deg);
+      opacity: 0.05;
+    }
+
+    .shape.shape1 {
+      width: 200%;
+      height: 400px;
+      background: #000;
+      top: -100px;
+      left: -50%;
+    }
+
+    .shape.shape2 {
+      width: 200%;
+      height: 300px;
+      background: #111;
+      top: 300px;
+      left: -40%;
+    }
+
+    .shape.shape3 {
+      width: 150%;
+      height: 200px;
+      background: #000;
+      top: 700px;
+      left: -30%;
     }
 
     header {
       text-align: center;
-      padding: 50px 20px;
+      padding: 60px 20px 40px;
+      background-color: #000;
+      color: #fff;
+      animation: fadeInDown 1s ease-out;
     }
 
     header h1 {
-      font-size: 2.8rem;
-      color: #58a6ff;
+      font-size: 3rem;
+      font-weight: 700;
     }
 
     header p {
       font-size: 1.2rem;
       margin-top: 10px;
-      color: #8b949e;
+      color: #cccccc;
     }
 
     nav {
       margin-top: 30px;
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 30px;
     }
 
     nav a {
       text-decoration: none;
-      color: #58a6ff;
+      color: #ffffff;
       font-weight: 600;
-      transition: color 0.3s;
+      padding: 8px 14px;
+      border-radius: 6px;
+      position: relative;
+      transition: all 0.3s ease-in-out;
     }
 
     nav a:hover {
-      color: #1f6feb;
+      background-color: #fff;
+      color: #000;
     }
 
     section {
-      margin-top: 50px;
       max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 60px auto 20px;
+      padding: 0 20px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s forwards;
     }
 
+    section:nth-of-type(2) { animation-delay: 0.3s; }
+    section:nth-of-type(3) { animation-delay: 0.6s; }
+    section:nth-of-type(4) { animation-delay: 0.9s; }
+
     section h2 {
-      color: #58a6ff;
       margin-bottom: 15px;
+      font-size: 1.8rem;
+      color: #000000;
+    }
+
+    section p {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    a {
+      color: #000;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     footer {
       text-align: center;
-      margin-top: 60px;
-      color: #8b949e;
+      margin-top: 80px;
       font-size: 0.9rem;
+      color: #666;
+      padding-bottom: 40px;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      animation-delay: 1.2s;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @media (max-width: 600px) {
@@ -78,13 +183,22 @@
         font-size: 2rem;
       }
 
-      section {
-        padding: 0 10px;
+      nav {
+        flex-direction: column;
+        gap: 15px;
       }
     }
   </style>
 </head>
 <body>
+
+  <!-- Background Shapes -->
+  <div class="background-shapes">
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+  </div>
+
   <header>
     <h1>SecureWithParmar</h1>
     <p>Cybersecurity insights, tools, and projects by Himanshu Parmar</p>
@@ -112,7 +226,7 @@
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:securewithparmar@gmail.com" style="color:#58a6ff">securewithparmar@gmail.com</a></p>
+    <p>Email: <a href="mailto:securewithparmar@gmail.com">securewithparmar@gmail.com</a></p>
   </section>
 
   <footer>
