@@ -16,10 +16,12 @@
     body {
       background-color: #ffffff;
       color: #111111;
+      position: relative;
       line-height: 1.6;
       overflow-x: hidden;
     }
 
+    /* Background Geometric Shapes */
     .background-shapes {
       position: fixed;
       top: 0;
@@ -36,7 +38,7 @@
       opacity: 0.05;
     }
 
-    .shape1 {
+    .shape.shape1 {
       width: 200%;
       height: 400px;
       background: #000;
@@ -44,7 +46,7 @@
       left: -50%;
     }
 
-    .shape2 {
+    .shape.shape2 {
       width: 200%;
       height: 300px;
       background: #111;
@@ -52,7 +54,7 @@
       left: -40%;
     }
 
-    .shape3 {
+    .shape.shape3 {
       width: 150%;
       height: 200px;
       background: #000;
@@ -69,7 +71,7 @@
     }
 
     header h1 {
-      font-size: 3rem;
+      font-size: 2.8rem;
       font-weight: 700;
     }
 
@@ -86,6 +88,7 @@
       font-weight: 600;
       padding: 8px 14px;
       border-radius: 6px;
+      position: relative;
       transition: all 0.3s ease-in-out;
     }
 
@@ -94,29 +97,21 @@
       color: #000;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: 60px auto;
+    main {
+      max-width: 900px;
+      margin: 50px auto;
       padding: 0 20px;
-      animation: fadeInUp 1s forwards;
-    }
-
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 30px;
-      color: #000;
+      animation: fadeInUp 1s ease;
     }
 
     .service {
-      margin-bottom: 40px;
-      border-left: 4px solid #000;
-      padding-left: 20px;
+      margin-bottom: 50px;
     }
 
-    .service h3 {
-      font-size: 1.4rem;
+    .service h2 {
+      font-size: 1.8rem;
+      color: #000;
       margin-bottom: 10px;
-      color: #111;
     }
 
     .service p {
@@ -124,81 +119,40 @@
       color: #333;
     }
 
-    .cta {
-      margin-top: 50px;
-      text-align: center;
-      font-size: 1.1rem;
-    }
-
-    .cta a {
-      text-decoration: none;
-      color: #fff;
-      background-color: #000;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
-
-    .cta a:hover {
-      background-color: #333;
-    }
-
     footer {
       text-align: center;
-      margin-top: 60px;
-      padding: 40px 20px;
+      margin-top: 80px;
       font-size: 0.9rem;
       color: #666;
+      padding-bottom: 40px;
+      opacity: 0;
       animation: fadeIn 1s forwards;
       animation-delay: 1.2s;
     }
 
+    /* Animations */
     @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      nav {
-        flex-direction: column;
-        gap: 15px;
-      }
+      header h1 { font-size: 2rem; }
+      nav { flex-direction: column; gap: 15px; }
     }
   </style>
 </head>
 <body>
-
   <!-- Background Shapes -->
   <div class="background-shapes">
     <div class="shape shape1"></div>
@@ -207,41 +161,39 @@
   </div>
 
   <header>
-    <h1>SecureWithParmar</h1>
+    <h1>Our Services</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
-      <a href="index.html#projects">Projects</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <div class="container">
-    <h2>What We Offer</h2>
-
+  <main>
     <div class="service">
-      <h3>Penetration Testing</h3>
-      <p>We simulate real-world attacks on your applications, infrastructure, or cloud to identify critical vulnerabilities before attackers do.</p>
+      <h2>🔍 Penetration Testing</h2>
+      <p>Simulated cyberattacks to identify and fix security weaknesses in your web apps, networks, and infrastructure.</p>
     </div>
 
     <div class="service">
-      <h3>Bug Bounty Consulting</h3>
-      <p>We help companies set up responsible disclosure programs and guide researchers to ethically report and patch security issues.</p>
+      <h2>🐞 Bug Bounty Help</h2>
+      <p>We help companies set up, manage, and triage responsible disclosure programs to improve security through ethical hackers.</p>
     </div>
 
     <div class="service">
-      <h3>Security Audits</h3>
-      <p>Our structured audit process reviews your entire digital footprint—from websites and APIs to internal tools—for security misconfigurations and code weaknesses.</p>
+      <h2>🛡️ Security Consulting</h2>
+      <p>From securing startups to enterprise environments, we guide you through best practices, compliance, and threat modeling.</p>
     </div>
 
-    <div class="cta">
-      <p>Want to secure your business? <a href="mailto:securewithparmar@gmail.com">Let's Talk</a></p>
+    <div class="service">
+      <h2>📚 Training & Workshops</h2>
+      <p>Hands-on sessions for teams on cybersecurity awareness, red teaming, and web app security testing.</p>
     </div>
-  </div>
+  </main>
 
-  <footer>
-    &copy; 2025 SecureWithParmar. All rights reserved.
+  <footer id="contact">
+    Contact: <a href="mailto:securewithparmar@gmail.com">securewithparmar@gmail.com</a><br />
+    &copy; 2025 SecureWithParmar. Built by Himanshu Parmar
   </footer>
-
 </body>
 </html>
